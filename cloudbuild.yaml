@@ -33,7 +33,7 @@ steps:
         'cloud-run-sa@aqueous-glyph-457202-i2.iam.gserviceaccount.com'
       ]
 options:
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
 
 images:
   - 'us-central1-docker.pkg.dev/aqueous-glyph-457202-i2/flask-images/flask-app:$SHORT_SHA'
