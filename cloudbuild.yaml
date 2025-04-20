@@ -4,7 +4,7 @@ steps:
       [
         'build',
         '-t',
-        'us-central1-docker.pkg.dev/aqueous-glyph-457202-i2/flask-images/flask-app:$SHORT_SHA',
+        'us-central1-docker.pkg.dev/aqueous-glyph-457202-i2/flask_demo_app/flask-app:$SHORT_SHA',
         '.'
       ]
 
@@ -12,7 +12,7 @@ steps:
     args:
       [
         'push',
-        'us-central1-docker.pkg.dev/aqueous-glyph-457202-i2/flask-images/flask-app:$SHORT_SHA'
+        'us-central1-docker.pkg.dev/aqueous-glyph-457202-i2/flask_demo_app/flask-app:$SHORT_SHA'
       ]
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -23,7 +23,7 @@ steps:
         'deploy',
         'flask-app',
         '--image',
-        'us-central1-docker.pkg.dev/aqueous-glyph-457202-i2/flask-images/flask-app:$SHORT_SHA',
+        'us-central1-docker.pkg.dev/aqueous-glyph-457202-i2/flask_demo_app/flask-app:$SHORT_SHA',
         '--region',
         'us-central1',
         '--platform',
