@@ -16,6 +16,16 @@ def hello():
       </body>
     </html>
     """
+@app.route('/new-routing')
+def new_routing():
+    html = """
+    <html>
+      <head><title>New Routing</title></head>
+      <body>
+        <h1>Hello from Flask on Cloud Run!<br>Welcome to the New Routing!!!!</h1>
+      </body>
+    </html>
+    """
     return render_template_string(html)
 
 if __name__ == '__main__':
